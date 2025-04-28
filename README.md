@@ -50,3 +50,17 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+### Answer
+
+My program uses distance_matrix.length * distance_matrix.length as the stopping point for the number of iterations for twoOptSwap. Within that loop, I calculate the route's length after calling the swap, to determine which route was shorter, and the calculateLength function iterates through the entire route's length, n. So the worst case asymptotic time complexity for my iteration would be $\Theta(n^3)$. 
+
+My program updates the currentRoute for every swap, and I believe that's the largest amount of memory it holds at a time. Since the route holds every element, n, the worst case asymptotic memory complexity would be $\Theta(n)$. 
+
+## Sources and Plagiarism
+
+- https://www.geeksforgeeks.org/how-to-select-a-random-element-from-array-in-javascript/
+- https://github.com/COSC3020/tsp-local-search-CollinDavis03/blob/main/code.js
+
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+
